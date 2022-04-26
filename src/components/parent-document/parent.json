@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_parent_document_parents",
+  "info": {
+    "displayName": "Parent",
+    "icon": "parking",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "parent_document": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::document.document"
+    }
+  }
+}

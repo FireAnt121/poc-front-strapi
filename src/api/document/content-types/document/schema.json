@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "documents",
+  "info": {
+    "singularName": "document",
+    "pluralName": "documents",
+    "displayName": "Documents",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Content": {
+      "type": "richtext",
+      "required": true
+    },
+    "version": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::version.version",
+      "inversedBy": "documents"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "targetField": "Title"
+    },
+    "parents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::document.document"
+    },
+    "Order": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "default": 0,
+      "min": 0
+    },
+    "Parent_Document": {
+      "type": "component",
+      "repeatable": false,
+      "component": "parent-document.parent"
+    }
+  }
+}

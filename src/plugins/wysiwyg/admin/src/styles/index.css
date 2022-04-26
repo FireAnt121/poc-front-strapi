@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Square+Peg&display=swap');
+
+body{
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+.ck .ck-content .table{
+    display: block;
+}
+body .ck .ck-widget .ck-widget__type-around__button {
+    padding: 5px;
+}
+.ck.ck-editor__main > .ck{
+    display: block;
+    max-width:100% !important;
+    margin:auto;
+    padding:3rem;
+    font-family: 'Bai Jamjuree', sans-serif !important;
+}
+
+body .gXEjht {
+    position: fixed;
+    z-index: 1000;
+}
+/* body .ck. figure.table .ck{
+    display: none;
+} */
+/*  */

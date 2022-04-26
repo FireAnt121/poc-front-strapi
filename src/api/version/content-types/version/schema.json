@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "versions",
+  "info": {
+    "singularName": "version",
+    "pluralName": "versions",
+    "displayName": "Version",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Version": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "regex": "^(\\d+\\.)?(\\d+\\.)?(\\*|\\d+)$"
+    },
+    "documents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::document.document",
+      "mappedBy": "version"
+    }
+  }
+}
