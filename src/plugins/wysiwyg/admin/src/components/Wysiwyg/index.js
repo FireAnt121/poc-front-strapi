@@ -7,6 +7,9 @@ import Editor from "../CKEditor";
 import MediaLib from "../MediaLib";
 import config from "../../config/ckeditor";
 
+import Comment from "../Comment";
+
+
 const Wysiwyg = (props) => {
   const { formatMessage } = useIntl();
   const { description, error, intlLabel, placeholder, name, onChange, value } =
@@ -125,6 +128,7 @@ for(var i = 0; i<myFonts.length; i++){
         isOpen={isOpen}
         onChange={handleChange}
       />
+      <Comment/>
     </Stack>
   );
 };

@@ -4,6 +4,10 @@ module.exports = {
       enabled: true,
       resolve: './src/plugins/wysiwyg'
     },
+    'docs' : {
+      enabled: true,
+      resolve : './src/plugins/docs'
+    },
     'preview-button': {
         enabled: true,
         config: {
@@ -32,4 +36,3 @@ module.exports = {
       },
     // ...
   }
-  

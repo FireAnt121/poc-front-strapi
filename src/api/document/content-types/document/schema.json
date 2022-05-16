@@ -4,7 +4,7 @@
   "info": {
     "singularName": "document",
     "pluralName": "documents",
-    "displayName": "Documents",
+    "displayName": "Document",
     "description": ""
   },
   "options": {
@@ -31,11 +31,6 @@
       "required": true,
       "targetField": "Title"
     },
-    "parents": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::document.document"
-    },
     "Order": {
       "type": "integer",
       "required": true,
@@ -43,10 +38,17 @@
       "default": 0,
       "min": 0
     },
-    "Parent_Document": {
-      "type": "component",
-      "repeatable": false,
-      "component": "parent-document.parent"
+    "document": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::document.document",
+      "inversedBy": "documents"
+    },
+    "documents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::document.document",
+      "mappedBy": "document"
     }
   }
 }

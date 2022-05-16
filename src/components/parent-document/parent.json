@@ -6,11 +6,5 @@
     "description": ""
   },
   "options": {},
-  "attributes": {
-    "parent_document": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::document.document"
-    }
-  }
+  "attributes": {}
 }
