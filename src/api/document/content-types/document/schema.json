@@ -38,8 +38,8 @@
     },
     "Order": {
       "type": "integer",
-      "required": true,
-      "unique": true,
+      "required": false,
+      "unique": false,
       "default": 0,
       "min": 0
     },
@@ -47,6 +47,13 @@
       "type": "component",
       "repeatable": false,
       "component": "parent-document.parent"
+    },
+    "Parent_Name": {
+      "type": "string"
+    },
+    "Parent_ID": {
+      "type": "integer",
+      "min": 0
     }
   }
 }

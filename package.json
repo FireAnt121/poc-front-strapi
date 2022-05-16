@@ -10,10 +10,12 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "@notum-cz/strapi-plugin-content-versioning": "^0.4.1",
     "@strapi/plugin-i18n": "4.1.8",
     "@strapi/plugin-users-permissions": "4.1.8",
     "@strapi/strapi": "4.1.8",
     "mysql": "2.18.1",
+    "strapi-plugin-menus": "^0.3.0",
     "strapi-plugin-preview-button": "^0.3.1"
   },
   "author": {
