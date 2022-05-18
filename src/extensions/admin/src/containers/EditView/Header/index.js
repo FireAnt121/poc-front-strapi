@@ -71,7 +71,7 @@ const Header = ({
 
   const headerTitle = useMemo(() => {
     const title = isSingleType ? currentContentTypeName : entryHeaderTitle;
-
+    console.log("title::", title);
     return title || currentContentTypeName;
   }, [currentContentTypeName, entryHeaderTitle, isSingleType]);
 
@@ -207,6 +207,7 @@ const Header = ({
       <PluginHeader {...headerProps} />
       {hasDraftAndPublish && (
         <>
+
           <ModalConfirm
             isOpen={showWarningUnpublish}
             toggle={toggleWarningPublish}

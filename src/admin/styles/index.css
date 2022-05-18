@@ -1,3 +1,7 @@
 *, body{
     background:#000 !important;
 }
+
+#main-content {
+    position: relative;
+}
