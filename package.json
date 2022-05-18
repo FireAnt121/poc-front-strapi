@@ -7,7 +7,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@ckeditor/ckeditor5-react": "^5.0.0",
@@ -16,6 +17,7 @@
     "@strapi/plugin-users-permissions": "4.1.8",
     "@strapi/strapi": "4.1.8",
     "mysql": "2.18.1",
+    "patch-package": "^6.4.7",
     "strapi-plugin-menus": "^0.3.0",
     "strapi-plugin-preview-button": "^0.3.1"
   },
@@ -29,5 +31,8 @@
     "node": ">=12.x.x <=16.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "postinstall": "^0.7.4"
+  }
 }
