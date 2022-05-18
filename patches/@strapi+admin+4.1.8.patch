@@ -1,0 +1,26 @@
+diff --git a/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/index.js b/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/index.js
+index 08ae4be..dadfcd9 100644
+--- a/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/index.js
++++ b/node_modules/@strapi/admin/admin/src/content-manager/pages/EditView/index.js
+@@ -230,6 +230,8 @@ const EditView = ({
+                         );
+                       })}
+                     </Stack>
++                    <InjectionZone area="contentManager.editView.customs" slug={slug} />
++
+                   </GridItem>
+                   <GridItem col={3} s={12}>
+                     <Stack spacing={2}>
+diff --git a/node_modules/@strapi/admin/admin/src/injectionZones.js b/node_modules/@strapi/admin/admin/src/injectionZones.js
+index 533e291..5a80daa 100644
+--- a/node_modules/@strapi/admin/admin/src/injectionZones.js
++++ b/node_modules/@strapi/admin/admin/src/injectionZones.js
+@@ -12,7 +12,7 @@ const injectionZones = {
+     },
+   },
+   contentManager: {
+-    editView: { informations: [], 'right-links': [] },
++    editView: { informations: [], 'right-links': [] , 'customs': []},
+     listView: { actions: [], deleteModalAdditionalInfos: [] },
+   },
+ };
