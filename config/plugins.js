@@ -8,13 +8,13 @@ module.exports = {
       enabled: true,
       resolve : './src/plugins/docs'
     },
-    // "content-versioning": {
-    //   enabled:  true,
-    // },
-    // 'content-hierarchy': {
-    //   enabled: true,
-    //   resolve: './src/plugins/content-hierarchy'
-    // },
+    "content-versioning": {
+      enabled:  true,
+    },
+    'content-hierarchy': {
+      enabled: true,
+      resolve: './src/plugins/content-hierarchy'
+    },
     'preview-button': {
         enabled: true,
         config: {

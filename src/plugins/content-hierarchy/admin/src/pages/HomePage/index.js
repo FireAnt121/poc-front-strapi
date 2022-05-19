@@ -4,17 +4,18 @@
  *
  */
 
-import React, { memo, useState, useEffect, useRef } from 'react';
+import React, {memo, useState, useEffect, useRef} from 'react';
 
-import { fetchContentTypes, fetchDocuments } from '../../utils/api';
+import {fetchContentTypes, fetchDocuments} from '../../utils/api';
 
 import ContentTypesTable from '../../components/ContentTypesTable';
 
-import { LoadingIndicatorPage } from '@strapi/helper-plugin';
+import {LoadingIndicatorPage} from '@strapi/helper-plugin';
 
-import { Box } from '@strapi/design-system/Box';
-import { BaseHeaderLayout } from '@strapi/design-system/Layout';
+import {Box} from '@strapi/design-system/Box';
+import {BaseHeaderLayout} from '@strapi/design-system/Layout';
 
+import { DocumentTree } from "../../components/DocumentTree";
 
 const HomePage = () => {
   const contentTypes = useRef({});
@@ -31,7 +32,7 @@ const HomePage = () => {
   }, []);
 
   if (isLoading) {
-    return <LoadingIndicatorPage />;
+    return <LoadingIndicatorPage/>;
   }
 
   return (
@@ -43,7 +44,7 @@ const HomePage = () => {
           as="h2"
         />
       </Box>
-      <ContentTypesTable contentTypes={contentTypes.current} />
+      <ContentTypesTable contentTypes={contentTypes.current}/>
     </>
   );
 };

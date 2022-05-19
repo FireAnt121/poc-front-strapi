@@ -34,7 +34,7 @@
     "Order": {
       "type": "integer",
       "required": true,
-      "unique": true,
+      "unique": false,
       "default": 0,
       "min": 0
     },

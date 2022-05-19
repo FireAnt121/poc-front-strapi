@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = ({ strapi }) => ({
+module.exports = ({strapi}) => ({
   getContentTypes() {
     const contentTypes = strapi.contentTypes;
     const keys = Object.keys(contentTypes);
@@ -22,7 +22,7 @@ module.exports = ({ strapi }) => ({
       }
     });
 
-    return { collectionTypes, singleTypes } || null;
+    return {collectionTypes, singleTypes} || null;
   },
 
   async getDocuments(version) {
@@ -31,14 +31,14 @@ module.exports = ({ strapi }) => ({
     try {
       const entries = await strapi.entityService.findMany('api::version.version', {
         fields: ['version'],
-        filters: { 'version': version},
-        populate: [ 'documents' ]
+        filters: {'version': version},
+        populate: ['documents']
         // populate: [{
         //   'version',
         //   filters: {'id': 1 } }]
       })
-      return { entries }
-    } catch(e) {
+      return {entries}
+    } catch (e) {
       return e
     }
     // console.log(entries);
@@ -47,14 +47,28 @@ module.exports = ({ strapi }) => ({
 
   async updateDocument(datas) {
     console.log(datas);
-    try{
+    try {
       const entry = await strapi.entityService.update('api::document.document', datas.id, {
         data: datas.body
       })
       console.log("entry", entry);
       return entry;
-    }catch(e){
+    } catch (e) {
       return e;
     }
+  },
+
+  async updateManyDocuments(documents) {
+
+    for (const document of documents) {
+      try {
+         await strapi.entityService.update('api::document.document', document.id, {
+          data: document
+        });
+      } catch (e) {
+        console.log(e)
+      }
+    }
+    return 'updated all';
   }
 });

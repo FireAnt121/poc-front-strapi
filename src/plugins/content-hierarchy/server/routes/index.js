@@ -13,6 +13,19 @@ module.exports = [
     }
   },
   {
+    method: "POST",
+    path: "/update-many-documents",
+    handler: "seo.updateManyDocuments",
+    config: {
+      policies: [
+        {
+          name: 'admin::hasPermissions',
+          config: { actions: ['plugin::content-type-builder.read'] },
+        },
+      ],
+    }
+  },
+  {
     method: "GET",
     path: "/custom-content-types",
     handler: "seo.findContentTypes",

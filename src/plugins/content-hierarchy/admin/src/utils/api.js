@@ -45,4 +45,22 @@ const updateDocuments = async(data) => {
   //   return error;
   // }
 }
-export { fetchContentTypes, fetchDocuments, updateDocuments };
+const updateManyDocuments = async (documents) =>{
+
+  try{
+    const ob = {};
+    ob.body = documents;
+    ob.opts = {method:'POST', body:ob.body};
+    ob.requestUrl = `/${pluginId}/update-many-documents`;
+
+    const response = await request(ob.requestUrl, ob.opts);
+    if (response) {
+      // yield put(submitSucceeded());
+      return response;
+    } else {
+      // yield put(submitError('An error occurred'));
+      return "error";
+    }
+  }catch (e){return e}
+}
+export { fetchContentTypes, fetchDocuments, updateDocuments, updateManyDocuments };

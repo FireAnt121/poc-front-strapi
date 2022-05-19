@@ -21,6 +21,11 @@ module.exports = {
     const request = ctx.request.body;
     // const data = arr[1].split("&order=");
     ctx.body = await strapi.plugin('content-hierarchy').service('seo').updateDocument(request);
+  },
+
+  async updateManyDocuments(ctx){
+    const request = ctx.request.body;
+    ctx.body = await strapi.plugin('content-hierarchy').service('seo').updateManyDocuments(request);
   }
   // findDocuments(ctx) {
   //   // const entries = await strapi.db.query('api::document.document').findMany({ select: ['title']});
