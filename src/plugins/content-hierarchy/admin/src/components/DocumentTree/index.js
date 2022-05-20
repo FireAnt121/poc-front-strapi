@@ -3,6 +3,7 @@ import React, {useState, useEffect} from "react";
 import SortableTree from "react-sortable-tree";
 import 'react-sortable-tree/style.css'
 import {updateManyDocuments} from "../../utils/api";
+import './index.css'
 
 export const DocumentTree = ({levels}) => {
 
